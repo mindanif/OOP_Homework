@@ -1,17 +1,27 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Practice2;
 
-coord a = new coord(1, 1, 1);
-coord b = new coord(2, 2, 2);
-coord c = new coord(3, 3, 3);
-coord d = new coord(1, 0, 0);
+Coord a = new Coord(1,0,0);
+Coord b = new Coord(1,1, 0);
+Coord c = new Coord(0,1,0);
+Coord d = new Coord(0,0,0);
 
-a.show();
-Console.WriteLine(coord.Dist(a, b));
-coord.Equasion2D(a, b);
-coord.Equasion3D(a, b, d);
-Console.WriteLine(coord.DistBeg(a));
-(a+d).show();
-Console.WriteLine(a * b);
-coord.VectMult(a, d);
+Coord a1 = new Coord(0, 0, 0);
+Coord b1 = new Coord(-1, 0, 0);
+Coord c1 = new Coord(1, 1, 0);
+Coord d1 = new Coord(0, -1, 0);
+
+Dots QR = new Dots(a1,b1,c1,d1);
+
+
+
+Console.WriteLine(Dots.S(QR));
+Console.WriteLine(Dots.P(QR));
+Console.WriteLine(Dots.Diagon(QR)[1]);
+Console.WriteLine(Dots.Convex(QR));
+
+
+
+
+
 
