@@ -49,14 +49,18 @@ namespace Practice2
             double[] Diagon = new double[2] { D1, D2 };
             return Diagon;
         }
-        public static bool Convex(Dots QR)
+        public static bool Сonvex(Dots Qr)
         {
-            if (!((QR.A - QR.B) / (QR.A - QR.C))) { return false; }
-            if (!((QR.B - QR.C) / (QR.B - QR.D))) { return false; }
-            if (!((QR.C - QR.D) / (QR.C - QR.A))) { return false; }
-            return true;
+            if (VectMult(Qr.B - Qr.A, Qr.C - Qr.B) / VectMult(Qr.A - Qr.D, Qr.B - Qr.A) &&
+                VectMult(Qr.C - Qr.B, Qr.D - Qr.C) / VectMult(Qr.A - Qr.D, Qr.B - Qr.A) &&
+                VectMult(Qr.D - Qr.C, Qr.A - Qr.D) / VectMult(Qr.A - Qr.D, Qr.B - Qr.A))
+            {
+                return true;
+            }
 
+            return false;
         }
+
 
         public static new double Dist(Coord A, Coord B)
         {
